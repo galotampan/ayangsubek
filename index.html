@@ -1,8 +1,4 @@
 
-
-
-
-
 <!doctype html>
 <html amp lang="id">
 <head>
@@ -15,7 +11,7 @@
   <meta http-equiv="content-language" content="id">
   <title>TOTOSLOT288 : Website Digital Dengan Pengalaman Hiburan Yang Lebih Berkelas</title>
   <meta name="description" content="TOTOSLOT288 adalah website yang mampu memberikan pengalaman yang praktis, nyaman, dan berkualitas bagi setiap pengguna.">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="page-locale" content="id,en">
   <meta name="keywords" content="TOTOSLOT288, TOTO SLOT, situs TOTOSLOT288, TOTOSLOT288 togel, agen TOTOSLOT288, TOTOSLOT288 online, situs TOTOSLOT288, agen TOTOSLOT288">
   <meta name="rating" content="general">
@@ -91,7 +87,7 @@
       --kt-blue:#167fe6;
       --kt-text:#daa520;
       --kt-muted:#ff0000;
-      --kt-line:rgba(183 0 0)
+      --kt-line:rgb(183 0 0)
     }
 
     *{box-sizing:border-box}
@@ -168,14 +164,14 @@
       content:"";
       position:absolute;
       top:-60%;
-      left:-55%;
+      left:0;
       z-index:3;
       width:32%;
       height:220%;
       pointer-events:none;
       background:
         linear-gradient(90deg,transparent,rgba(255,255,255,.04),rgba(255,255,255,.2),rgba(255,255,255,.04),transparent);
-      transform:rotate(22deg);
+      transform:translateX(-220%) rotate(22deg);
       animation:ktVaultSweep 7s ease-in-out infinite
     }
 
@@ -320,7 +316,7 @@
 
     .kt-hero-scan{
       position:absolute;
-      top:-20%;
+      top:0;
       left:0;
       z-index:2;
       width:100%;
@@ -329,6 +325,7 @@
       background:
         linear-gradient(180deg,transparent,rgba(255,75,109,.24),rgba(255,255,255,.16),transparent);
       filter:blur(1px);
+      transform:translateY(-125%);
       animation:ktScanMove 4.2s linear infinite
     }
 
@@ -345,7 +342,7 @@
       color:#000000;
       background:
         linear-gradient(145deg,#daa520,#daa520);
-      border:1px solid rgba(167 167 167);
+      border:1px solid rgb(167 167 167);
       border-radius:9px;
       font-family:Manrope,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
       font-size:8px;
@@ -395,7 +392,7 @@
       font-weight:800;
       letter-spacing:.45px;
       text-shadow:0 2px 5px rgba(0,0,0,.45);
-      transition:filter .2s ease,transform .2s ease
+      transition:transform .2s ease
     }
 
     .kt-access-btn::before{
@@ -415,13 +412,13 @@
       content:"";
       position:absolute;
       top:-90%;
-      left:-55%;
+      left:0;
       width:30%;
       height:280%;
       pointer-events:none;
       background:
         linear-gradient(90deg,transparent,rgba(255,255,255,.08),rgba(255,255,255,.42),rgba(255,255,255,.08),transparent);
-      transform:rotate(22deg);
+      transform:translateX(-220%) rotate(22deg);
       animation:ktButtonShine 4.8s ease-in-out infinite
     }
 
@@ -612,7 +609,7 @@
       font-size:25px;
       font-weight:800;
       line-height:1;
-      letter-spacing:4px;
+      letter-spacing:2.8px;
       text-align:center;
       text-shadow:
         0 0 17px rgba(255,74,110,.75),
@@ -627,11 +624,11 @@
       position:absolute;
       top:0;
       bottom:0;
-      left:-55%;
+      left:0;
       width:30%;
       background:
         linear-gradient(90deg,transparent,rgba(255,255,255,.85),transparent);
-      transform:skewX(-18deg);
+      transform:translateX(-220%) skewX(-18deg);
       animation:ktBrandShine .75s ease 1.18s forwards
     }
 
@@ -663,19 +660,27 @@
     }
 
     @keyframes ktVaultSweep{
-      0%,28%{left:-55%;opacity:0}
-      42%{opacity:.65}
-      65%,100%{left:130%;opacity:0}
+      0%,28%{
+        opacity:0;
+        transform:translateX(-220%) rotate(22deg)
+      }
+      42%{
+        opacity:.65
+      }
+      65%,100%{
+        opacity:0;
+        transform:translateX(500%) rotate(22deg)
+      }
     }
 
     @keyframes ktGemPulse{
       0%,100%{
         opacity:.55;
-        box-shadow:0 0 8px #daa520
+        transform:rotate(45deg) scale(1)
       }
       50%{
         opacity:1;
-        box-shadow:0 0 17px #daa520
+        transform:rotate(45deg) scale(1.08)
       }
     }
 
@@ -685,16 +690,34 @@
     }
 
     @keyframes ktScanMove{
-      0%{top:-20%;opacity:0}
-      15%{opacity:1}
-      75%{opacity:.75}
-      100%{top:115%;opacity:0}
+      0%{
+        opacity:0;
+        transform:translateY(-125%)
+      }
+      15%{
+        opacity:1
+      }
+      75%{
+        opacity:.75
+      }
+      100%{
+        opacity:0;
+        transform:translateY(640%)
+      }
     }
 
     @keyframes ktButtonShine{
-      0%,35%{left:-55%;opacity:0}
-      48%{opacity:.75}
-      68%,100%{left:130%;opacity:0}
+      0%,35%{
+        opacity:0;
+        transform:translateX(-220%) rotate(22deg)
+      }
+      48%{
+        opacity:.75
+      }
+      68%,100%{
+        opacity:0;
+        transform:translateX(500%) rotate(22deg)
+      }
     }
 
     @keyframes ktSealReveal{
@@ -715,8 +738,7 @@
     @keyframes ktBrandReveal{
       to{
         opacity:1;
-        transform:translateY(0);
-        letter-spacing:2.8px
+        transform:translateY(0)
       }
     }
 
@@ -725,11 +747,18 @@
     }
 
     @keyframes ktLineExpand{
-      to{width:180px}
+      from{
+        transform:scaleX(0)
+      }
+      to{
+        transform:scaleX(1)
+      }
     }
 
     @keyframes ktSubtitleReveal{
-      to{opacity:.8}
+      to{
+        opacity:.8
+      }
     }
 
     @keyframes ktPanelLeft{
@@ -742,8 +771,7 @@
 
     @keyframes ktOpeningHide{
       to{
-        opacity:0;
-        visibility:hidden
+        opacity:0
       }
     }
 
@@ -937,6 +965,7 @@
 
       <footer class="kt-vault-footer">
         &copy; Copyright 2026 <a href="https://link-totoslot288.rest/register?ref=NRGAKAA00IY">TOTOSLOT288</a> SEO LLKS
+      </footer>
 
     </section>
   </main>
